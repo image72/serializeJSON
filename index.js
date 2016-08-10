@@ -14,7 +14,7 @@ module.export = serializeJSON
           el.checked && (json[key] = val);
         } else if (el.nodeName.toLowerCase() == 'select' && el.multiple) {
           [].forEach.call(el.selectedOptions, function(ele) {
-            ( (Object.prototype.toString.call(json[key]) == '[object Array]' ) ? json[key].push(val) : json[key] = [val]);
+            ( (Object.prototype.toString.call(json[key]) == '[object Array]' ) ? json[key].push(ele.value) : json[key] = [ele.value]);
           })
         } else {
           json[key] = val;
