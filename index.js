@@ -12,13 +12,10 @@ module.export = serializeJSON
           el.checked && ( (Object.prototype.toString.call(json[key]) == '[object Array]' ) ? json[key].push(val) : json[key] = [val]);
         } else if (el.hasAttribute('type') && el.getAttribute('type').toLowerCase() == 'radio') {
           el.checked && (json[key] = val);
-        } else if (el.nodeName.toLowerCase() == 'select') {
-          if (el.multiple) {
-            [].forEach.call(el.selectedOptions, function(ele) {
-              ele.checked && (json[key] = val);
-            })
-          }
-
+        } else if (el.nodeName.toLowerCase() == 'select' && el.multiple) {
+          [].forEach.call(el.selectedOptions, function(ele) {
+            ( (Object.prototype.toString.call(json[key]) == '[object Array]' ) ? json[key].push(val) : json[key] = [val]);
+          })
         } else {
           json[key] = val;
         }
