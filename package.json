@@ -1,0 +1,24 @@
+{
+  "name": "serializejson",
+  "version": "1.0.0",
+  "description": "serialize form to json with vanilla javascript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/image72/serializeJSON.git"
+  },
+  "keywords": [
+    "serialize",
+    "form",
+    "vanilla"
+  ],
+  "author": "image72",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/image72/serializeJSON/issues"
+  },
+  "homepage": "https://github.com/image72/serializeJSON#readme"
+}
