@@ -31,3 +31,11 @@ function serializeJSON(form) {
   });
   return json;
 };
+
+const getFormDataJSON = formEl => {
+  const formData = new FormData(formEl);
+  return [...formData.entries()].reduce((origin, [k, v]) => {
+    origin[k] = v;
+    return origin;
+  },{})
+}
